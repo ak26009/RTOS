@@ -10,6 +10,7 @@ SemaphoreHandle_t sem;
 
 void task1(void *d)
 {
+        printf("task 1\n");
         xSemaphoreTake(sem, portMAX_DELAY);
         printf("Task1 entered critical section\n");
         vTaskDelay(pdMS_TO_TICKS(2000));
@@ -21,6 +22,7 @@ void task1(void *d)
 
 void task2(void *d)
 {
+        printf("task 2\n");
         xSemaphoreTake(sem, portMAX_DELAY);
         printf("Task2 entered critical section\n");
         vTaskDelay(pdMS_TO_TICKS(2000));
@@ -32,6 +34,7 @@ void task2(void *d)
 
 void task3(void *d)
 {
+        printf("task 3\n");
         xSemaphoreTake(sem, portMAX_DELAY);
         printf("Task3 entered critical section\n");
         vTaskDelay(pdMS_TO_TICKS(2000));
@@ -42,6 +45,7 @@ void task3(void *d)
 
 void task4(void *d)
 {
+        printf("task 4\n");
         xSemaphoreTake(sem, portMAX_DELAY);
         printf("Task4 entered critical section\n");
         vTaskDelay(pdMS_TO_TICKS(2000));
